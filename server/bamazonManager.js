@@ -16,7 +16,7 @@ var questions = [
         name: 'product',
         type: 'input',
         message:
-            'Please enter the ID of the product to which you would like to add inventory.'
+            'Please enter the ID of the products to which you would like to add inventory.'
     },
     {
         name: 'units',
@@ -25,28 +25,28 @@ var questions = [
     }
 ];
 
-// Acquire new product details
+// Acquire new products details
 var prodQuestions = [
     {
         name: 'product',
         type: 'input',
-        message: 'Please enter the name of the product that you would like to add.'
+        message: 'Please enter the name of the products that you would like to add.'
     },
     {
         name: 'department',
         type: 'input',
-        message: 'Please enter the name of the department for the product.'
+        message: 'Please enter the name of the department for the products.'
     },
     {
         name: 'price',
         type: 'input',
-        message: 'Please enter the name of the price of the product.'
+        message: 'Please enter the name of the price of the products.'
     },
 
     {
         name: 'stock',
         type: 'input',
-        message: 'Please enter the amount of the stock for the product.'
+        message: 'Please enter the amount of the stock for the products.'
     }
 ];
 
@@ -110,14 +110,14 @@ function viewInventory() {
     });
 }
 
-// Collect the product details to update inventory
+// Collect the products details to update inventory
 function addInventory() {
     inquirer.prompt(questions).then(function (answer) {
         addUnits(answer.product, answer.units);
     });
 }
 
-// Collect the product details to add
+// Collect the products details to add
 function addProduct() {
     inquirer.prompt(prodQuestions).then(function (answer) {
         addNewProd(answer.product, answer.department, answer.price, answer.stock);
@@ -145,7 +145,7 @@ function addUnits(product, units) {
     });
 }
 
-// Add a completely new product with details
+// Add a completely new products with details
 function addNewProd(product, department, price, stock) {
     var query =
         'INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES (?, ?, ?, ?)';

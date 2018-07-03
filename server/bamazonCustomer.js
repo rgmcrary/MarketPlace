@@ -14,7 +14,7 @@ var questions = [
   {
     name: 'product',
     type: 'input',
-    message: 'Please enter the ID of the product that you would like to buy:'
+    message: 'Please enter the ID of the products that you would like to buy:'
   },
   {
     name: 'units',

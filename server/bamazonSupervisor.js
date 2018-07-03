@@ -14,7 +14,7 @@ var connection = mysql.createConnection({
   database: 'bamazon'
 });
 
-// Acquire new product details
+// Acquire new products details
 var deptQuestions = [
   {
     name: 'department',
